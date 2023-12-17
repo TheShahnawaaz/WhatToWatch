@@ -1,4 +1,3 @@
-# from streamlit_extras.add_vertical_space import add_vertical_space
 import streamlit as st
 from openai import OpenAI
 import json
@@ -20,14 +19,14 @@ client = OpenAI()
 
 # Set the theme
 st.set_page_config(
-    page_title="Movie Recommendation App",
+    page_title="Movie Recommendation AI",
     page_icon="🍿",
     initial_sidebar_state="expanded",
     layout="wide"
 )
 
 # Title of the web app
-st.title("Movie Recommendation App")
+st.title("Movie Recommendation AI")
 
 # User input for movie name
 movie_name = st.text_input("What type of movies do you like?")
