@@ -3,19 +3,13 @@ from openai import OpenAI
 import json
 import requests
 import streamlit_antd_components as sac
-import os
-from dotenv import load_dotenv
-
-# Load environment variables from .env file
-load_dotenv()
 
 
-
-my_openai_api_key = os.getenv("OPENAI_API_KEY")
-my_tmdb_api_key = os.getenv("TMDB_API_KEY")
+my_openai_api_key = st.secrets["OPENAI_API_KEY"]
+my_tmdb_api_key = st.secrets["TMDB_API_KEY"]
 
 # Initialize the OpenAI client
-client = OpenAI()
+client = OpenAI(api_key=my_openai_api_key)
 
 # Set the theme
 st.set_page_config(
