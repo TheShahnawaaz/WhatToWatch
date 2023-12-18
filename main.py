@@ -110,7 +110,7 @@ if movie_name:
                 # Handle the exception and set a default poster URL
                 movie["poster_url"] = "https://image.tmdb.org/t/p/w500/iiZZdoQBEYBv6id8su7ImL0oCbD.jpg"
                 st.warning("Failed to get movie poster for ***:orange[{}]***".format(
-                    movie['title']) + str(e), icon="⚠️")
+                    movie['title']), icon="⚠️")
 
             try:
                 with cols[i-1]:
@@ -137,7 +137,7 @@ if movie_name:
                     sac.rate(label=None,
                              value=movie["rating"], half=True, readonly=True, count=10, key=movie["title"], color='#2980b9')
             except Exception as e:
-                st.error("Something went wrong while displaying movie details for ***:orange[{}]***".format(
+                st.warning("Something went wrong while displaying movie details for ***:orange[{}]***".format(
                     movie['title']) + str(e), icon="❌")
             prev.success(
                 "Got movie poster for ***:orange[{}]***".format(movie['title']), icon="✅")
