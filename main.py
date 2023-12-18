@@ -115,7 +115,6 @@ if movie_name:
             try:
                 with cols[i-1]:
                     # Display movie details
-                    st.write("---")
                     st.image(movie["poster_url"])
 
                     st.markdown(
@@ -137,6 +136,7 @@ if movie_name:
                     # Use the `sac.rate` method to display a star rating
                     sac.rate(label=None,
                              value=movie["rating"], half=True, readonly=True, count=10, key=movie["title"], color='#2980b9',size=15)
+                    # st.write("---")
             except Exception as e:
                 st.warning("Something went wrong while displaying movie details for ***:orange[{}]***".format(
                     movie['title']) + str(e), icon="❌")
