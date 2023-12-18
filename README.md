@@ -1,4 +1,4 @@
-# 🎬🍿 Movie Recommendation App 🍿🎬
+# 🎬🍿 [Movie Recommendation App Demo](https://theshahnawaz-mrai.streamlit.app/) 🍿🎬
 
 A delightful web app that provides personalized movie recommendations based on your preferences. Powered by OpenAI's GPT-3.5 Turbo, this app understands your movie tastes and suggests a curated list of must-watch films. Explore new releases, find hidden gems, and make your movie nights unforgettable!
 
@@ -21,7 +21,7 @@ A delightful web app that provides personalized movie recommendations based on y
 4. Run the app: `streamlit run app.py`
 
 🌐 **Live Demo:**
-[Movie Recommendation App Demo](#)
+[Movie Recommendation App Demo](https://theshahnawaz-mrai.streamlit.app/)
 
 📝 **Contributing:**
 Contributions are welcome! Feel free to open issues or pull requests.
