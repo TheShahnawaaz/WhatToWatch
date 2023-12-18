@@ -93,12 +93,19 @@ if movie_name:
                 response = requests.get(url)
                 data = response.json()
 
-                if data['results']:
-                    data = data['results'][0]
-                    movie["poster_url"] = f"https://image.tmdb.org/t/p/w500{data['poster_path']}"
+                if 'results' in data and data['results']:
+                    first_result = data['results'][0]
+                    poster_path = first_result.get('poster_path')
+                
+                    if poster_path:
+                        movie["poster_url"] = f"https://image.tmdb.org/t/p/w500{poster_path}"
+                    else:
+                        # Raise an exception if poster path is not found
+                        raise Exception("Poster path not available in the TMDB API response.")
                 else:
-                    # If poster not found, set a default poster URL
-                    movie["poster_url"] = "https://image.tmdb.org/t/p/w500/iiZZdoQBEYBv6id8su7ImL0oCbD.jpg"
+                    # Raise an exception if 'results' key is not present or 'results' list is empty
+                    raise Exception("'results' key is missing or empty in the TMDB API response.")
+
             except Exception as e:
                 # Handle the exception and set a default poster URL
                 movie["poster_url"] = "https://image.tmdb.org/t/p/w500/iiZZdoQBEYBv6id8su7ImL0oCbD.jpg"
