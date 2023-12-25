@@ -13,14 +13,14 @@ client = OpenAI(api_key=my_openai_api_key)
 
 # Set the theme
 st.set_page_config(
-    page_title="Movie Recommendation AI",
+    page_title="What to watch?",
     page_icon="🍿",
     initial_sidebar_state="expanded",
     layout="wide"
 )
 
 # Title of the web app
-st.title("Movie Recommendation AI")
+st.title("What to watch?")
 
 # User input for movie name
 movie_name = st.text_input("What type of movies do you like?")
