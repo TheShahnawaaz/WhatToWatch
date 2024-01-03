@@ -198,7 +198,7 @@ else:
     st.write("")
     st.write("")
     st.write("")
-    st.balloons()
+    st.snow()
 
 
     # Footer section with social media links and "Made with ❤️ by me"
