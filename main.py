@@ -13,7 +13,7 @@ GOOGLE_API_KEY = st.secrets["GOOGLE_API_KEY"]
 my_tmdb_api_key = st.secrets["TMDB_API_KEY"]
 genai.configure(api_key=GOOGLE_API_KEY)
 # Initialize the OpenAI client
-client = genai.GenerativeModel('gemini-pro')
+client = genai.GenerativeModel('gemini-2.0-flash')
 
 # Set the theme
 st.set_page_config(
